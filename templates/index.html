@@ -8,22 +8,75 @@
             <div class="row">
                 <div class="col-8"> 
                     <form action="/" method="post">
+                        <title>DropDown List</title>
+                        <h4>Wine countries</h4>
+                        <form>
+                        <select name = "countrydropdown">
+                        <option value = "US" selected>US</option>
+                        <option value = "Italy" selected>Italy</option>
+                        <option value = "France" selected>France</option>
+                        <option value = "Australia" selected>Australia</option>
+                        </select>
+                        </form>
 
+                        <title>DropDown List</title>
+                        <h4> Wine variety</h4>
+                        <form>
+                        <select name = "winedropdown">
+                        <option value = "Pinot Noir" selected>US</option>
+                        <option value = "Chardonnary" selected>Italy</option>
+                        <option value = "Red Blend" selected>France</option>
+                        <option value = "Cabernet Sauvignon" selected>Australia</option>
+                        </select>
+                        </form>
 
-                        {% for f in featureList %}
-                            <label class="form-label" for="{{f.Name}}">{{f.Label}}</label>
-                            <input type="number" class="form-control" name="{{f.Name}}" id="{{f.Name}}" value="{{f.Value}}"
-                                min="{{f.Min}}" max="{{f.Max}}"
-                            >
-                        {% endfor %}
+                        ;
+                        <form>
+                            <fieldset>
+                            <legend>Choose your wine preference</legend>
+                              <div>
+                                <input type="checkbox" id="ripe" name="interest" value="ripe">
+                                <label for="ripe">Ripe</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="crisp" name="interest" value="crisp">
+                                <label for="crisp">Crisp</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="bright" name="interest" value="bright">
+                                <label for="bright">Bright</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="dry" name="interest" value="dry">
+                                <label for="dry">Dry</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="full" name="interest" value="full">
+                                <label for="full">Full</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="sweet" name="interest" value="sweet">
+                                <label for="sweet">Sweet</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="fresh" name="interest" value="fresh">
+                                <label for="fresh">Fresh</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="earthy" name="interest" value="earthy">
+                                <label for="earthy">Earthy</label>
+                            </div>
+                            <div>
+                                <button type="submit">Submit form</button>
+                              </div>
+                            </fieldset>
+                          </form>
 
-                        <button type="submit" class="btn btn-outline-primary">Make Prediction</button>
-                    </form>
-                </div>
-                <div class="col-4" style="border:1px solid black;">
-                    My prediction: {{prediction}}
-                </div>
-            </div>
-        </div>
+                          <br><br>
+                        
+                  
     </body>
 </html>
+
+
+                        
