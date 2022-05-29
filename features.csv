@@ -1,9 +1,0 @@
-Name,Label,Value,Min,Max
-Pregnancies,Number of Pregnancies,0,0.0,20
-Glucose,Glucose Level,0,0.0,200
-BloodPressure,Blood Pressure,0,0.0,125
-SkinThickness,Skin Thickness (mm),0,0.0,100
-Insulin,Insulin Level,0,0.0,900
-BMI,BMI,0,0.0,75
-DiabetesPedigreeFunction,Diabetes Pedigree Function,0,0,3
-Age,Age,21,21.0,90
