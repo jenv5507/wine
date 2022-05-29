@@ -1,0 +1,11 @@
+Flask 
+gunicorn 
+itsdangerous 
+Jinja2 
+numpy
+packaging 
+pandas==1.4.2
+pickleshare
+scikit-learn==1.1.1
+scipy==1.8.1
+sklearn==0.0
