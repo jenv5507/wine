@@ -11,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 
 #  Import and read the csv file(s)
 #file_path = "../Mod20_Group_Challenge/iris.csv"
-wine_df=pd.read_csv("https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/data_cleaning/cleaned_wine_data.csv")
+wine_df=pd.read_csv("https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/data_cleaning/cleaned_wine_data.csv", encoding="latin1")
 wine_df.head(10)
 
 # Pull in top keywords

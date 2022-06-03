@@ -19,26 +19,17 @@ from collections import Counter
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler,OneHotEncoder
 import os
-from matplotlib import pyplot as plt
-import seaborn as sns
-import hvplot.pandas
 from sklearn.metrics import balanced_accuracy_score
 from sklearn.metrics import confusion_matrix
-from imblearn.metrics import classification_report_imbalanced
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestClassifier
-from imblearn.ensemble import BalancedRandomForestClassifier
 from sklearn.datasets import make_classification
-from sklearn.ensemble import AdaBoostClassifier
-from imblearn.ensemble import EasyEnsembleClassifier
-from imblearn.over_sampling import RandomOverSampler, SMOTE
-from imblearn.under_sampling import ClusterCentroids
-from imblearn.combine import SMOTEENN 
-import tensorflow as tf
-from tensorflow.keras.callbacks import ModelCheckpoint
+#import tensorflow as tf
+#from tensorflow.keras.callbacks import ModelCheckpoint
 from sklearn.metrics import classification_report
+
 
 
 
@@ -55,8 +46,8 @@ from sklearn.metrics import classification_report
 
 #  Import and read the csv file(s)
 #file_path = "../Mod20_Group_Challenge/iris.csv"
-wine_df=pd.read_csv("../data_cleaning/cleaned_wine_data.csv", encoding='latin1')
-wine_df.head(10)
+wine_df=pd.read_csv("https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/data_cleaning/cleaned_wine_data.csv", encoding='latin1')
+
 
 
 # In[5]:
@@ -66,7 +57,7 @@ wine_df.head(10)
 keywords = ['ripe', 'crisp', 'bright', 'dry', 'full', 'sweet', 'fresh', 'earthy', 'bitter', 'aftertaste']
 for k in keywords:
     wine_df[k] = wine_df.description.apply(lambda x : 1 if x.find(k)>-1 else 0)
-wine_df.head()
+
 
 
 # In[6]:
@@ -74,26 +65,26 @@ wine_df.head()
 
 # Drop the non-beneficial ID columns, 'Description'.
 wine_df=wine_df.drop(columns=['description'])
-wine_df.head()
+
 
 
 # In[7]:
 
 
-print(wine_df.dtypes)
+#print(wine_df.dtypes)
 
 
 # In[8]:
 
 
-wine_df.nunique()
+#wine_df.nunique()
 
 
 # In[9]:
 
 
 point_counts=wine_df.points.value_counts()
-point_counts
+#point_counts
 
 
 # In[10]:
@@ -121,14 +112,14 @@ wine_df['Points'] = wine_df['points'].apply(getPoints)
 # In[12]:
 
 
-wine_df.head()
+#wine_df.head()
 
 
 # In[13]:
 
 
 price_counts=wine_df.price.value_counts()
-price_counts
+#price_counts
 
 
 # In[14]:
@@ -148,14 +139,14 @@ for pri in replace_price:
     wine_df.price= wine_df.price.replace(pri,"Other")
     
 # Check to make sure binning was successful
-wine_df.price.value_counts()
+#wine_df.price.value_counts()
 
 
 # In[16]:
 
 
 variety_counts=wine_df.variety.value_counts()
-variety_counts
+#variety_counts
 
 
 # In[17]:
@@ -175,14 +166,14 @@ for var in replace_variety:
     wine_df.variety= wine_df.variety.replace(var,"Other")
     
 # Check to make sure binning was successful
-wine_df.variety.value_counts()
+#wine_df.variety.value_counts()
 
 
 # In[19]:
 
 
 country_counts=wine_df.country.value_counts()
-country_counts
+#country_counts
 
 
 # In[20]:
@@ -196,7 +187,7 @@ for coun in replace_country:
     wine_df.country= wine_df.country.replace(coun,"Other")
     
 # Check to make sure binning was successful
-wine_df.country.value_counts()
+#wine_df.country.value_counts()
 
 
 # In[21]:
@@ -226,7 +217,7 @@ wine_df['price']=wine_df['price'].astype(str)
 # In[25]:
 
 
-print(wine_df.dtypes)
+#print(wine_df.dtypes)
 
 
 # In[26]:
@@ -245,7 +236,7 @@ wine_cat=wine_df.dtypes[wine_df.dtypes =="object"].index.tolist()
 # In[28]:
 
 
-wine_df[wine_cat].nunique()
+#wine_df[wine_cat].nunique()
 
 
 # In[29]:
@@ -257,7 +248,7 @@ enc = OneHotEncoder(sparse=False)
 # Fit and transform the OneHotEncoder using the categorical variable list
 wine_encode_df = pd.DataFrame(enc.fit_transform(wine_df[wine_cat]))
 wine_encode_df.columns = enc.get_feature_names(wine_cat)
-wine_encode_df.head()
+#wine_encode_df.head()
 
 
 # In[30]:
@@ -266,13 +257,13 @@ wine_encode_df.head()
 # Add the encoded variable names to the dataframe
 wine_df = wine_df.merge(wine_encode_df,left_index=True, right_index=True)
 wine_df = wine_df.drop(wine_cat,1)
-wine_df.head()
+#wine_df.head()
 
 
 # In[31]:
 
 
-print(wine_df.dtypes)
+#print(wine_df.dtypes)
 
 
 # In[32]:
@@ -288,13 +279,13 @@ wine_df = wine_df.drop(columns=['points'])
 # In[33]:
 
 
-wine_df.head()
+#wine_df.head()
 
 
 # In[34]:
 
 
-wine_df.dtypes
+#wine_df.dtypes
 
 
 # In[35]:
@@ -375,7 +366,7 @@ acc_score = accuracy_score(y_test, y_pred)
 
 # Displaying results
 print("Confusion Matrix")
-display(cm_df)
+#display(cm_df)
 print(f"Accuracy Score : {acc_score}")
 print("Classification Report")
 print(classification_report(y_test, y_pred))
@@ -383,6 +374,9 @@ print(classification_report(y_test, y_pred))
 
 # In[ ]:
 
+
+import pickle
+pickle.dump(rf_model, open("../model.p", "wb"))
 
 
 
