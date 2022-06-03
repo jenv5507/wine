@@ -1,82 +1,84 @@
 <html>
-    <head>
-        <title>My Sample</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-8"> 
-                    <form action="/" method="post">
-                        <title>DropDown List</title>
-                        <h4>Wine countries</h4>
-                        <form>
-                        <select name = "countrydropdown">
-                        <option value = "US" selected>US</option>
-                        <option value = "Italy" selected>Italy</option>
-                        <option value = "France" selected>France</option>
-                        <option value = "Australia" selected>Australia</option>
-                        </select>
-                        </form>
 
-                        <title>DropDown List</title>
-                        <h4> Wine variety</h4>
-                        <form>
-                        <select name = "winedropdown">
-                        <option value = "Pinot Noir" selected>US</option>
-                        <option value = "Chardonnary" selected>Italy</option>
-                        <option value = "Red Blend" selected>France</option>
-                        <option value = "Cabernet Sauvignon" selected>Australia</option>
-                        </select>
-                        </form>
+<head>
+  <title>Wine Time</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/predictor.css')}}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
 
-                        ;
-                        <form>
-                            <fieldset>
-                            <legend>Choose your wine preference</legend>
-                              <div>
-                                <input type="checkbox" id="ripe" name="interest" value="ripe">
-                                <label for="ripe">Ripe</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="crisp" name="interest" value="crisp">
-                                <label for="crisp">Crisp</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="bright" name="interest" value="bright">
-                                <label for="bright">Bright</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="dry" name="interest" value="dry">
-                                <label for="dry">Dry</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="full" name="interest" value="full">
-                                <label for="full">Full</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="sweet" name="interest" value="sweet">
-                                <label for="sweet">Sweet</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="fresh" name="interest" value="fresh">
-                                <label for="fresh">Fresh</label>
-                              </div>
-                              <div>
-                                <input type="checkbox" id="earthy" name="interest" value="earthy">
-                                <label for="earthy">Earthy</label>
-                            </div>
-                            <div>
-                                <button type="submit">Submit form</button>
-                              </div>
-                            </fieldset>
-                          </form>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8">
+        <form action="/" method="post">
+          <title>DropDown List</title>
+          <h4>Wine countries</h4>
+          <form>
+            <select name="countrydropdown">
+              <option value="US" selected>US</option>
+              <option value="Italy" selected>Italy</option>
+              <option value="France" selected>France</option>
+              <option value="Australia" selected>Australia</option>
+            </select>
+          </form>
 
-                          <br><br>
-                        
-                  
-    </body>
+          <title>WineDropDown List</title>
+          <h4> Wine variety</h4>
+          <form>
+            <select name="winedropdown">
+              <option value="Pinot Noir" selected>Pinot Noir</option>
+              <option value="Chardonnay" selected>Chardonnay</option>
+              <option value="Red Blend" selected>Red Blend</option>
+              <option value="Cabernet Sauvignon" selected>Cabernet Sauvignon</option>
+            </select>
+          </form>
+
+          <form>
+            <fieldset>
+              <legend>Choose your wine preference</legend>
+              <div>
+                <input type="checkbox" id="ripe" name="interest" value="ripe">
+                <label for="ripe">Ripe</label>
+              </div>
+              <div>
+                <input type="checkbox" id="crisp" name="interest" value="crisp">
+                <label for="crisp">Crisp</label>
+              </div>
+              <div>
+                <input type="checkbox" id="bright" name="interest" value="bright">
+                <label for="bright">Bright</label>
+              </div>
+              <div>
+                <input type="checkbox" id="dry" name="interest" value="dry">
+                <label for="dry">Dry</label>
+              </div>
+              <div>
+                <input type="checkbox" id="full" name="interest" value="full">
+                <label for="full">Full</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sweet" name="interest" value="sweet">
+                <label for="sweet">Sweet</label>
+              </div>
+              <div>
+                <input type="checkbox" id="fresh" name="interest" value="fresh">
+                <label for="fresh">Fresh</label>
+              </div>
+              <div>
+                <input type="checkbox" id="earthy" name="interest" value="earthy">
+                <label for="earthy">Earthy</label>
+              </div>
+              <div>
+                <button type="submit">Submit form</button>
+              </div>
+            </fieldset>
+          </form>
+
+          <br><br>
+
+
+</body>
+
 </html>
-
-
-                        
