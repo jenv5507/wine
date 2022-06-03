@@ -1,8 +1,33 @@
+.jumbotron {
+  color: #000000;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif; 
+}
+
 body {
     content:"";
-    background-image: url("../wineglass.jpg"); 
+    background-image: url("../wineglass50.jpg"); 
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: absolute;
+    background-size: auto;
     background-attachment: fixed;
-    opacity: .5;
-  }
+    opacity: 1;
+    font-family: "Times New Roman", Times, serif; 
+    font-size: 1rem;
+}
+
+form {
+  font-family: "Times New Roman", Times, serif; 
+  font-size: 1rem;
+}
+
+h4 {
+  font-family: "Times New Roman", Times, serif; 
+}
+
+title {
+  font-family: "Times New Roman", Times, serif; 
+}
