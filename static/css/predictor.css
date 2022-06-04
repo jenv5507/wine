@@ -9,10 +9,10 @@
 
 body {
     content:"";
-    background-image: url("../wineglass50.jpg"); 
+    background-image: url("../wineglass50LRG.jpg"); 
     background-repeat: no-repeat;
-    background-position: absolute;
-    background-size: auto;
+    background-position: center;
+    margin: auto;
     background-attachment: fixed;
     opacity: 1;
     font-family: "Georgia", Times, serif; 
