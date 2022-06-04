@@ -8,18 +8,21 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index(): 
     p = ''
+    countrydropdown = ''
+    winedropdown = ''
+    preference = ''
     if request.method == "POST":
         countrydropdown = request.form["countrydropdown"]
         winedropdown = request.form["winedropdown"]
-        preference =request.form.getlist('')
+        preference =request.form.getlist('preference')
  
-        guess = [[countrydropdown, winedropdown, preference]]
+        prediction = [[countrydropdown, winedropdown, preference]]
         
         model = pickle.load(open("model.p", "rb"))
-        p = model.predict(guess)[0]
+        p = model.predict(prediction)[0]
     
     else:
-        print("Please choose selections.")
+        print("Please choose selections!")
    
     return render_template("index.html",
                         P = p, 
