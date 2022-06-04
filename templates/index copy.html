@@ -1,0 +1,141 @@
+<html>
+
+<head>
+  <title>Wine Time</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/predictor.css')}}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1><b>Les Sommeliers Dashboard</b></h1>
+        <h2>Use the interactive charts below to explore the dataset</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <form action="/" method="post">
+          <title>DropDown List</title>
+          <h4>Countries of Provenance</h4>
+          <form>
+            <select name="countrydropdown">
+              <option value="US" selected>US</option>
+              <option value="France" selected>France</option>
+              <option value="Italy" selected>Italy</option>
+              <option value="Spain" selected>Spain</option>
+              <option value="Portugal" selected>Portugal</option>
+              <option value="Chile" selected>Chile</option>
+              <option value="Argentina" selected>Argentina</option>
+              <option value="Austria" selected>Austria</option>
+              <option value="Germany" selected>Germany</option>
+              <option value="Australia" selected>Australia</option>
+              <option value="Other" selected>Other</option>
+            </select>
+          </form>
+
+          <title>WineDropDown List</title>
+          <h4>Grape Varieties</h4>
+          <form>
+            <select name="winedropdown">
+              <option value="Pinot Noir" selected>Pinot Noir</option>
+              <option value="Chardonnay" selected>Chardonnay</option>
+              <option value="Red Blend" selected>Red Blend</option>
+              <option value="Cabernet Sauvignon" selected>Cabernet Sauvignon</option>
+              <option value="Bordeaux-style Red Blend" selected>Bordeaux-style Red Blend</option>
+              <option value="Riesling" selected>Riesling</option>
+              <option value="Sauvignon Blanc" selected>Sauvignon Blanc</option>
+              <option value="Syrah" selected>Syrah</option>
+              <option value="Rose" selected>Rose</option>
+              <option value="Malbec" selected>Malbec</option>
+              <option value="Portuguese Red" selected>Portuguese Red</option>
+              <option value="Merlot" selected>Merlot</option>
+              <option value="Other" selected>Other</option>
+            </select>
+          </form>
+
+          <title>PriceDropDown List</title>
+          <h4>Cost per Bottle</h4>
+          <form>
+            <select name="pricedropdown">
+              <option value="$10.00 and under" selected>$10.00 and under</option>
+              <option value="$10.01-$12.00" selected>$10.01-$12.00</option>
+              <option value="$12.01-$13.00" selected>$12.01-$13.00</option>
+              <option value="$13.01-$14.00" selected>$13.01-$14.00</option>
+              <option value="$14.01-$15.00" selected>$14.01-$15.00</option>
+              <option value="$15.01-$16.00" selected>$15.01-$16.00</option>
+              <option value="$16.01-$17.00" selected>$16.01-$17.00</option>
+              <option value="$17.01-$18.00" selected>$17.01-$18.00</option>
+              <option value="$18.01-$20.00" selected>$18.01-$20.00</option>
+              <option value="$20.01-$22.00" selected>$20.01-$22.00</option>
+              <option value="$22.01-$25.00" selected>$22.01-$25.00</option>
+              <option value="$25.01-$30.00" selected>$25.01-$30.00</option>
+              <option value="$30.01-$35.00" selected>$30.01-$35.00</option>
+              <option value="$35.01-$40.00" selected>$35.01-$40.00</option>
+              <option value="$40.01-$50.00" selected>$40.01-$50.00</option>
+              <option value="$50.01 and over" selected>$50.01 and over</option>
+            </select>
+          </form>
+
+          <form>
+            <fieldset>
+              <legend>Select descriptors to match your wine preference</legend>
+              <div>
+                <input type="checkbox" id="ripe" name="preference" value="ripe">
+                <label for="ripe">Ripe</label>
+              </div>
+              <div>
+                <input type="checkbox" id="crisp" name="preference" value="crisp">
+                <label for="crisp">Crisp</label>
+              </div>
+              <div>
+                <input type="checkbox" id="bright" name="preference" value="bright">
+                <label for="bright">Bright</label>
+              </div>
+              <div>
+                <input type="checkbox" id="dry" name="preference" value="dry">
+                <label for="dry">Dry</label>
+              </div>
+              <div>
+                <input type="checkbox" id="full" name="preference" value="full">
+                <label for="full">Full</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sweet" name="preference" value="sweet">
+                <label for="sweet">Sweet</label>
+              </div>
+              <div>
+                <input type="checkbox" id="fresh" name="preference" value="fresh">
+                <label for="fresh">Fresh</label>
+              </div>
+              <div>
+                <input type="checkbox" id="earthy" name="preference" value="earthy">
+                <label for="earthy">Earthy</label>
+              </div>
+              <div>
+                <input type="checkbox" id="bitter" name="preference" value="bitter">
+                <label for="bitter">Bitter</label>
+              </div>
+              <div>
+                <input type="checkbox" id="aftertaste" name="preference" value="aftertaste">
+                <label for="aftertaste">Aftertaste</label>
+              </div>
+              <div>
+                <button type="submit">Submit for Wine Quality......</button>
+              </form>
+
+              </div>
+              <div class="col-1" style="border:1px solid rgb(5, 5, 5);">
+                Quality: {{p}}
+              </div>
+            </fieldset>
+    
+          <br><br>
+
+
+</body>
+
+</html>
