@@ -99,20 +99,15 @@ def index():
                 prediction.append(0)
 
 
-        
-
         prefList = [ripe, crisp, bright, dry, full, sweet, fresh, earthy, bitter, aftertaste]
         prediction = prefList + prediction
         
-
-
-        #prediction = [[ ripe, crisp, bright, dry, full, sweet, fresh, earthy, bitter, aftertaste]]
         
-        print(prediction)
+        
 
         model = pickle.load(open("model.p", "rb"))
         p = model.predict([prediction])[0]
-        print(p)
+        
     else:
         print("Please choose selections!")
    
@@ -120,8 +115,17 @@ def index():
                         P = p, 
                         Country = countrydropdown,
                         Variety = winedropdown,
-                        Price = pricedropdown
-                   
+                        Price = pricedropdown,
+                        Ripe = ripe,
+                        Crisp = crisp,
+                        Bright = bright,
+                        Dry = dry,
+                        Full = full,
+                        Sweet = sweet,
+                        Fresh = fresh,
+                        Earthy = earthy,
+                        Bitter = bitter,
+                        Aftertaste = aftertaste
                         )
 
 if __name__ == "__main__":
