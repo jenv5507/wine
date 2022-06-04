@@ -12,7 +12,19 @@ def index():
     winedropdown = ''
     pricedropdown = ''
     prediction = ''
+    ripe = ''
+    crisp = ''
+    bright =''
+    dry = ''
+    full = ''
+    sweet = ''
+    fresh = ''
+    earthy = ''
+    bitter = ''
+    aftertaste = ''
+    
     print(request.method)
+
     if request.method == "POST":
 
         countryList = [
