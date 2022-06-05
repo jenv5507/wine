@@ -34,3 +34,9 @@
     font-family: "Georgia", Times, serif;
     text-size-adjust: auto;
   }
+
+  div {
+    font-family: "Georgia", Times, serif;
+    text-size-adjust: auto;
+    font-size: 20px;
+  }
