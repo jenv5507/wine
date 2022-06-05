@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 jumbotron text-center">
+          <br>
+        <h1><b>Les Sommeliers</b></h1>
+        <br>
+        <h2>We provide useful tools for the discerning restaurant to employ while building a superior wine menu.</h2>
+        <br>
+        <h3>Explore our Extensive Wine Database <br>
+        </h3>
+        <h4>Wines from Winemag.com</small></h4>
+        <br>
+        </div>
+      </div>
+    </div>
+        
+    <div class="'container-fluid">
+      <div class="row">
+        <div class="col-md-2"></div>
+           <div class="col-md-8">
+               <p>
+                   Browse our wine review database by selecting the qualities in a wine that you are interested in. <br>
+                   More info about the dataset and filter features
+                   <br>
+               </p>
+           </div>
+        </div>
+      </div>
+    </div>
+  
+   <div class="container-fluid">
+       <div class="row">
+            <div class="col-md-3">
+               <form class="'bg-secondary">
+                   <p>Filter Search</p>
+                   <ul class="list-group bg-secondary">
+                       <li class="list-group-item bg-secondary">
+                           <label for="country">Enter Country</label>
+                           <input type="text" placeholder="Spain" id="country" />
+                       </li>
+                       <li class="list-group-item bg-secondary">
+                            <label for="province">Enter Province</label>
+                            <input type="text" placeholder="Rias Baixas" id="province" />
+                        </li>
+                        <li class="list-group-item bg-secondary">
+                            <label for="variety">Enter Grape Variety</label>
+                            <input type="text" placeholder="Albarino" id="variety" />
+                        </li>
+                        <li class="list-group-item bg-secondary">
+                            <label for="points">Enter Points from 80 to 100<US>
+                            <input type="text" placeholder="80" id="points" />
+                        </li>
+                   </ul>
+               </form>
+            </div>
+  
+           <div class="col-md-9">
+               <table class="table table-striped">
+                   <thead>
+                       <tr>
+                           <th>Wine</th>
+                           <th>Winery</th>
+                           <th>Country</th>
+                           <th>Province</th>
+                           <th>Grape Variety</th>
+                           <th>Description</th>
+                           <th>Price</th>
+                           <th>Points</th>
+                           <th>Sommelier</th>
+                       </tr>
+                   </thead>
+                   <tbody></tbody>
+               </table>
+           </div>
+           <br>
+           <div>
+            Return to <a href="{{ url_for('home') }}"> homepage</a>.<br>
+           </div>
+          </div>
+        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+       <script src="static/js/table_to_filter.js"></script>
+       <script src="static/js/app.js"></script>
+</body>
+</html>

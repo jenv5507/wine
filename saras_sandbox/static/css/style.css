@@ -1,0 +1,36 @@
+.jumbotron {
+    font-family: "Georgia", Times, serif; 
+    text-align: center;
+  }
+
+  body {
+    content:"";
+    background-image: url("../wineglass50LRG.jpg"); 
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 1;
+    font-family: "Georgia", Times, serif; 
+}
+
+  p {
+    font-size: 20px;
+    font-family: "Georgia", Times, serif;
+    text-size-adjust: auto;
+  }
+
+  li {
+    font-family: "Georgia", Times, serif;
+    text-size-adjust: auto;
+  }
+
+  ul {
+    font-family: "Georgia", Times, serif;
+    text-size-adjust: auto;
+  }
+
+  tr {
+    font-family: "Georgia", Times, serif;
+    text-size-adjust: auto;
+  }
