@@ -130,7 +130,7 @@ def index():
         if p == 1:
             p = "Good"
         if p == 2:
-            p = "very Good"
+            p = "Very Good"
         if p == 3:
             p = "Exceptional"
         
