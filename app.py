@@ -78,7 +78,6 @@ def index():
         ]
 
 
-        
         winedropdown = request.form["winedropdown"]
         pricedropdown = request.form["pricedropdown"]
         ripe = 1 if "ripe" in request.form else 0
@@ -117,12 +116,14 @@ def index():
 
         model = pickle.load(open("model.p", "rb"))
         p = model.predict([prediction])[0]
+        
+
         if p == 0:
             p = "Fine"
         if p == 1:
             p = "Good"
         if p == 2:
-            p = "very Good"
+            p = "Very Good"
         if p == 3:
             p = "Exceptional"
         

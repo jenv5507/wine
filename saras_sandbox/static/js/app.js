@@ -11,7 +11,7 @@ function buildTable(data) {
   tbody.html("");
 
   //loop through elements in the array
-  data.slice(0, 50).forEach((dataRow) => {
+  data.slice(0,50).forEach((dataRow) => {
       //create a variable that will append a row to the table body ("tr" stands for table row in HTML)
       let row = tbody.append("tr");
       //loop through each field in the row ("td" stads for table data in HTML)
@@ -27,7 +27,7 @@ function buildTable(data) {
 
 
 // Create a variable to keep track of all the filters as an object.
-var filters = { };
+var filters = {};
 
 // Use this function to update the filters. 
 function updateFilters() {
@@ -55,8 +55,15 @@ function updateFilters() {
     let filteredData = tableData; 
     // Loop through all of the filters and keep any data that
     // matches the filter values
-    Object.keys(filters).forEach(key => {
-      filteredData = filteredData.filter(row => row[key] === filters[key]);
+    // Object.entries(filters).forEach(([key, value]) => {
+    //   console.log(key);
+    //   filteredData = filteredData.slice(0,50).filter(row => row[key] === value);
+    //   console.log(filteredData)
+    // });
+    Object.entries(filters).forEach(([key,value]) => {
+      console.log(key);
+      filteredData = filteredData.filter(row => row[key] === value);
+      console.log(filteredData);
     });
     // Finally, rebuild the table using the filtered data
     buildTable(filteredData);
