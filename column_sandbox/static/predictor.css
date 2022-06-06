@@ -1,0 +1,35 @@
+.jumbotron {
+  color: #000000;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: large;
+  font-family: "Georgia", Times, serif; 
+}
+
+body {
+    content:"";
+    background-image: url("../wineglass50LRG.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    background-attachment: fixed;
+    opacity: 1;
+    font-family: "Georgia", Times, serif; 
+    font-size: 1rem;
+}
+
+form {
+  font-family: "Georgia", Times, serif; 
+}
+
+h4 {
+  font-family: "Georgia", Times, serif; 
+}
+
+title {
+  font-family: "Georgia", Times, serif; 
+}
+
+h4 {
+  font-family: "Georgia", Times, serif; 
+}
