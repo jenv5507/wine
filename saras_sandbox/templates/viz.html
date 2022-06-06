@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Les Sommeliers-Vizualizations</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,41 +11,63 @@
 </head>
     
 </body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10 jumbotron text-center">
+        <br>
+        <h1><b>Les Sommeliers</b></h1>
+        <br>
+        <h2>We provide useful tools for the discerning restaurant to employ while building a superior wine menu.</h2>
+        <br>
+        <h3>Explore our Extensive Wine Database <br></h3>
+        <br>
+        <h4>Wines from Winemag.com</small></h4>
+        <br>
+      </div>
+    </div>
+  </div>
 
   <div class="container-fluid">
-    <div class='tableauPlaceholder' id='viz1654470097662' style='position: relative'><noscript>
-      <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectStory_16543538908720&#47;AveragePriceandPointsbyCountry&#47;1_rss.png' style='border: none' />
-      </a>
-    </noscript>
+    <div class='tableauPlaceholder' id='viz1654486436819' style='position: relative'>
+      <noscript>
+        <a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TX&#47;TX8RS5M3Y&#47;1_rss.png' style='border: none' />
+        </a>
+      </noscript>
       <object class='tableauViz'  style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
         <param name='embed_code_version' value='3' /> 
-        <param name='site_root' value='' />
-        <param name='name' value='FinalProjectStory_16543538908720&#47;AveragePriceandPointsbyCountry' />
-        <param name='tabs' value='yes' /><param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectStory_16543538908720&#47;AveragePriceandPointsbyCountry&#47;1.png' /> 
-        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+        <param name='path' value='shared&#47;TX8RS5M3Y' /> 
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TX&#47;TX8RS5M3Y&#47;1.png' /> 
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
         <param name='display_overlay' value='yes' />
         <param name='display_count' value='yes' />
         <param name='language' value='en-US' />
-      </object>
-    </div>                
-    <script type='text/javascript'>                    
-      var divElement = document.getElementById('viz1654470097662');                    
+      </object></div>                
+      <script type='text/javascript'>                    
+      var divElement = document.getElementById('viz1654486436819');                    
       var vizElement = divElement.getElementsByTagName('object')[0];                    
-      vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='777px';}                     
+      var scriptElement = document.createElement('script');                   
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+    </div>
   </div>
 
-
-  <br>
-  <div>
-    Return to <a href="{{ url_for('home') }}"> homepage</a>.<br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <br>
+        <p><b>Return to <a href="{{ url_for('home') }}"> homepage</a>.</b><br>
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 </html>

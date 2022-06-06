@@ -7,6 +7,7 @@ var tbody = d3.select("tbody");
 
 
 function buildTable(data) {
+  // console.log(data);
   //first clear data in the table
   tbody.html("");
 
@@ -51,8 +52,10 @@ function updateFilters() {
   
   // Use this function to filter the table when data is entered.
   function filterTable() {
+    console.log("filtering");
     // Set the filtered data to the tableData.
     let filteredData = tableData; 
+    console.log(filteredData);
     // Loop through all of the filters and keep any data that
     // matches the filter values
     // Object.entries(filters).forEach(([key, value]) => {
@@ -64,6 +67,7 @@ function updateFilters() {
       console.log(key);
       filteredData = filteredData.filter(row => row[key] === value);
       console.log(filteredData);
+      console.log(value);
     });
     // Finally, rebuild the table using the filtered data
     buildTable(filteredData);
