@@ -12,7 +12,7 @@ function buildTable(data) {
   tbody.html("");
 
   //loop through elements in the array
-  data.slice(0,50).forEach((dataRow) => {
+  data.slice(0,100).forEach((dataRow) => {
       //create a variable that will append a row to the table body ("tr" stands for table row in HTML)
       let row = tbody.append("tr");
       //loop through each field in the row ("td" stads for table data in HTML)
